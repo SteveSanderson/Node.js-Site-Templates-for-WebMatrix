@@ -1,0 +1,13 @@
+!!! html
+html
+    head
+        if locals.pageTitle
+            title= pageTitle
+        link(href="/css/site.css", rel="stylesheet", type="text/css")
+    body
+        div.header
+            h1 My Node.js Site
+            nav
+                a(href='/') Home
+                a(href='/about') About
+        != body

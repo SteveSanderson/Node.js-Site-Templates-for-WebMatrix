@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif }
+h1:first-child { margin-top: 0 }
+
+.header { background-color: #DDD; padding: 1em; }
+    .header nav a { margin-right: 0.5em; text-decoration: none }
+

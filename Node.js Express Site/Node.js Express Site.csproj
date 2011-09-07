@@ -1,0 +1,1581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44F4330D-5103-43AB-A51C-D51277754109}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Node.js_Express_Site</RootNamespace>
+    <AssemblyName>Node.js Express Site</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.js" />
+    <Content Include="node_modules\connect\index.js" />
+    <Content Include="node_modules\connect\lib\connect.js" />
+    <Content Include="node_modules\connect\lib\http.js" />
+    <Content Include="node_modules\connect\lib\https.js" />
+    <Content Include="node_modules\connect\lib\index.js" />
+    <Content Include="node_modules\connect\lib\middleware\basicAuth.js" />
+    <Content Include="node_modules\connect\lib\middleware\bodyParser.js" />
+    <Content Include="node_modules\connect\lib\middleware\compiler.js" />
+    <Content Include="node_modules\connect\lib\middleware\cookieParser.js" />
+    <Content Include="node_modules\connect\lib\middleware\csrf.js" />
+    <Content Include="node_modules\connect\lib\middleware\directory.js" />
+    <Content Include="node_modules\connect\lib\middleware\errorHandler.js" />
+    <Content Include="node_modules\connect\lib\middleware\favicon.js" />
+    <Content Include="node_modules\connect\lib\middleware\limit.js" />
+    <Content Include="node_modules\connect\lib\middleware\logger.js" />
+    <Content Include="node_modules\connect\lib\middleware\methodOverride.js" />
+    <Content Include="node_modules\connect\lib\middleware\profiler.js" />
+    <Content Include="node_modules\connect\lib\middleware\query.js" />
+    <Content Include="node_modules\connect\lib\middleware\responseTime.js" />
+    <Content Include="node_modules\connect\lib\middleware\router.js" />
+    <Content Include="node_modules\connect\lib\middleware\session.js" />
+    <Content Include="node_modules\connect\lib\middleware\session\cookie.js" />
+    <Content Include="node_modules\connect\lib\middleware\session\memory.js" />
+    <Content Include="node_modules\connect\lib\middleware\session\session.js" />
+    <Content Include="node_modules\connect\lib\middleware\session\store.js" />
+    <Content Include="node_modules\connect\lib\middleware\static.js" />
+    <Content Include="node_modules\connect\lib\middleware\vhost.js" />
+    <Content Include="node_modules\connect\lib\patch.js" />
+    <Content Include="node_modules\connect\lib\utils.js" />
+    <Content Include="node_modules\express\index.js" />
+    <Content Include="node_modules\express\lib\express.js" />
+    <Content Include="node_modules\express\lib\http.js" />
+    <Content Include="node_modules\express\lib\https.js" />
+    <Content Include="node_modules\express\lib\request.js" />
+    <Content Include="node_modules\express\lib\response.js" />
+    <Content Include="node_modules\express\lib\router\collection.js" />
+    <Content Include="node_modules\express\lib\router\index.js" />
+    <Content Include="node_modules\express\lib\router\methods.js" />
+    <Content Include="node_modules\express\lib\router\route.js" />
+    <Content Include="node_modules\express\lib\utils.js" />
+    <Content Include="node_modules\express\lib\view.js" />
+    <Content Include="node_modules\express\lib\view\partial.js" />
+    <Content Include="node_modules\express\lib\view\view.js" />
+    <Content Include="node_modules\jade\.gitignore" />
+    <Content Include="node_modules\jade\.gitmodules" />
+    <Content Include="node_modules\jade\index.js" />
+    <Content Include="node_modules\jade\jade.js" />
+    <Content Include="node_modules\jade\jade.min.js" />
+    <Content Include="node_modules\jade\lib\compiler.js" />
+    <Content Include="node_modules\jade\lib\doctypes.js" />
+    <Content Include="node_modules\jade\lib\filters.js" />
+    <Content Include="node_modules\jade\lib\index.js" />
+    <Content Include="node_modules\jade\lib\inline-tags.js" />
+    <Content Include="node_modules\jade\lib\jade.js" />
+    <Content Include="node_modules\jade\lib\lexer.js" />
+    <Content Include="node_modules\jade\lib\nodes\block-comment.js" />
+    <Content Include="node_modules\jade\lib\nodes\block.js" />
+    <Content Include="node_modules\jade\lib\nodes\code.js" />
+    <Content Include="node_modules\jade\lib\nodes\comment.js" />
+    <Content Include="node_modules\jade\lib\nodes\doctype.js" />
+    <Content Include="node_modules\jade\lib\nodes\each.js" />
+    <Content Include="node_modules\jade\lib\nodes\filter.js" />
+    <Content Include="node_modules\jade\lib\nodes\index.js" />
+    <Content Include="node_modules\jade\lib\nodes\literal.js" />
+    <Content Include="node_modules\jade\lib\nodes\mixin.js" />
+    <Content Include="node_modules\jade\lib\nodes\node.js" />
+    <Content Include="node_modules\jade\lib\nodes\tag.js" />
+    <Content Include="node_modules\jade\lib\nodes\text.js" />
+    <Content Include="node_modules\jade\lib\parser.js" />
+    <Content Include="node_modules\jade\lib\runtime.js" />
+    <Content Include="node_modules\jade\lib\self-closing.js" />
+    <Content Include="node_modules\jade\lib\utils.js" />
+    <Content Include="node_modules\jade\runtime.js" />
+    <Content Include="node_modules\jade\runtime.min.js" />
+    <Content Include="node_modules\jade\support\benchmark.js" />
+    <Content Include="node_modules\jade\support\coffee-script\.gitignore" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\aliases.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>aliases.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\array_comprehensions.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>array_comprehensions.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\block_comment.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>block_comment.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\cake_tasks.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cake_tasks.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\classes.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>classes.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\comparisons.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>comparisons.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\conditionals.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>conditionals.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\embedded.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>embedded.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\existence.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>existence.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\expressions.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>expressions.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\expressions_assignment.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>expressions_assignment.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\expressions_comprehension.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>expressions_comprehension.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\expressions_try.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>expressions_try.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\fat_arrow.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fat_arrow.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\functions.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>functions.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\heredocs.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>heredocs.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\interpolation.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>interpolation.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\interpolation_expression.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>interpolation_expression.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\multiple_return_values.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>multiple_return_values.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\objects_and_arrays.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>objects_and_arrays.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\objects_reserved.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>objects_reserved.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\object_comprehensions.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>object_comprehensions.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\object_extraction.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>object_extraction.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\overview.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>overview.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\parallel_assignment.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>parallel_assignment.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\patterns_and_splats.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>patterns_and_splats.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\prototypes.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>prototypes.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\range_comprehensions.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>range_comprehensions.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\scope.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scope.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\slices.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>slices.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\soaks.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>soaks.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\splats.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>splats.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\splices.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>splices.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\strings.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\switch.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>switch.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\try.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>try.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\coffee\while.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>while.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\documentation\css\docs.css" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\css\idle.css" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\browser.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\cake.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\coffee-script.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\command.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\docco.css" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\grammar.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\helpers.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\index.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\lexer.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\nodes.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\optparse.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\repl.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\rewriter.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\scope.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\docs\underscore.html" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\images\favicon.ico" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\images\logo.png" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\aliases.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\array_comprehensions.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\block_comment.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\cake_tasks.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\classes.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\comparisons.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\conditionals.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\embedded.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\existence.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\expressions.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\expressions_assignment.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\expressions_comprehension.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\expressions_try.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\fat_arrow.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\functions.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\heredocs.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\interpolation.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\interpolation_expression.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\multiple_return_values.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\objects_and_arrays.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\objects_reserved.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\object_comprehensions.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\object_extraction.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\overview.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\parallel_assignment.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\patterns_and_splats.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\prototypes.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\range_comprehensions.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\scope.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\slices.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\soaks.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\splats.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\splices.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\strings.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\switch.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\try.js" />
+    <Content Include="node_modules\jade\support\coffee-script\documentation\js\while.js" />
+    <Content Include="node_modules\jade\support\coffee-script\examples\beautiful_code\binary_search.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>binary_search.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\beautiful_code\quicksort_runtime.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quicksort_runtime.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\beautiful_code\regular_expression_matcher.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>regular_expression_matcher.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\blocks.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>blocks.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\computer_science\binary_search.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>binary_search.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\computer_science\bubble_sort.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bubble_sort.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\computer_science\linked_list.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>linked_list.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\computer_science\luhn_algorithm.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>luhn_algorithm.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\computer_science\merge_sort.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>merge_sort.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\computer_science\selection_sort.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>selection_sort.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\poignant.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>poignant.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\potion.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>potion.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\underscore.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>underscore.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\examples\web_server.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>web_server.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\extras\coffee-script.js" />
+    <Content Include="node_modules\jade\support\coffee-script\index.html" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\browser.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\cake.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\coffee-script.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\command.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\grammar.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\helpers.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\index.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\lexer.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\nodes.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\optparse.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\parser.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\repl.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\rewriter.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\scope.js" />
+    <Content Include="node_modules\jade\support\coffee-script\lib\utilities.js" />
+    <Content Include="node_modules\jade\support\coffee-script\src\browser.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>browser.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\src\cake.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cake.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\src\coffee-script.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>coffee-script.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\src\command.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>command.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\src\grammar.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>grammar.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\src\helpers.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>helpers.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\src\index.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>index.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\src\lexer.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lexer.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\src\nodes.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nodes.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\src\optparse.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>optparse.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\src\repl.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>repl.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\src\rewriter.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rewriter.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\src\scope.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scope.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test.html" />
+    <Content Include="node_modules\jade\support\coffee-script\test\test_arguments.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_arguments.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_assignment.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_assignment.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_break.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_break.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_chaining.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_chaining.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_classes.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_classes.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_comments.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_comments.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_compilation.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_compilation.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_compound_assignment.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_compound_assignment.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_comprehensions.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_comprehensions.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_existence.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_existence.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_expressions.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_expressions.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_functions.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_functions.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_helpers.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_helpers.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_heredocs.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_heredocs.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_if.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_if.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_importing.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_importing.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_literals.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_literals.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_module.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_module.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_operations.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_operations.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_option_parser.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_option_parser.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_pattern_matching.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_pattern_matching.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_ranges_slices_and_splices.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_ranges_slices_and_splices.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_regexps.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_regexps.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_returns.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_returns.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_splats.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_splats.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_strings.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_strings.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_try_catch.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_try_catch.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\coffee-script\test\test_while.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test_while.coffee</DependentUpon>
+    </Content>
+    <Content Include="node_modules\jade\support\compile.js" />
+    <Content Include="node_modules\jade\support\expresso\.gitignore" />
+    <Content Include="node_modules\jade\support\expresso\.gitmodules" />
+    <Content Include="node_modules\jade\support\expresso\docs\api.html" />
+    <Content Include="node_modules\jade\support\expresso\docs\index.html" />
+    <Content Include="node_modules\jade\support\expresso\docs\layout\foot.html" />
+    <Content Include="node_modules\jade\support\expresso\docs\layout\head.html" />
+    <Content Include="node_modules\jade\support\expresso\lib\bar.js" />
+    <Content Include="node_modules\jade\support\expresso\lib\foo.js" />
+    <Content Include="node_modules\jade\support\expresso\test\assert.test.js" />
+    <Content Include="node_modules\jade\support\expresso\test\async.test.js" />
+    <Content Include="node_modules\jade\support\expresso\test\bar.test.js" />
+    <Content Include="node_modules\jade\support\expresso\test\foo.test.js" />
+    <Content Include="node_modules\jade\support\expresso\test\http.test.js" />
+    <Content Include="node_modules\jade\support\expresso\test\serial\async.test.js" />
+    <Content Include="node_modules\jade\support\expresso\test\serial\http.test.js" />
+    <Content Include="node_modules\jade\support\foot.js" />
+    <Content Include="node_modules\jade\support\head.js" />
+    <Content Include="node_modules\jade\support\sass\.gitignore" />
+    <Content Include="node_modules\jade\support\sass\index.js" />
+    <Content Include="node_modules\jade\support\sass\lib\sass.js" />
+    <Content Include="node_modules\jade\support\sass\spec\fixtures\comment.css" />
+    <Content Include="node_modules\jade\support\sass\spec\fixtures\continuation.css" />
+    <Content Include="node_modules\jade\support\sass\spec\fixtures\literal.css" />
+    <Content Include="node_modules\jade\support\sass\spec\fixtures\mixin.css" />
+    <Content Include="node_modules\jade\support\sass\spec\fixtures\properties.css" />
+    <Content Include="node_modules\jade\support\sass\spec\fixtures\properties.expand.css" />
+    <Content Include="node_modules\jade\support\sass\spec\fixtures\properties.nested.css" />
+    <Content Include="node_modules\jade\support\sass\spec\fixtures\selectors.css" />
+    <Content Include="node_modules\jade\support\sass\spec\fixtures\variables.alternate.css" />
+    <Content Include="node_modules\jade\support\sass\spec\fixtures\variables.css" />
+    <Content Include="node_modules\jade\support\sass\spec\fixtures\variables.regular.css" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\images\bg.png" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\images\hr.png" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\images\loading.gif" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\images\sprites.bg.png" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\images\sprites.png" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\images\vr.png" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\jspec.css" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\jspec.growl.js" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\jspec.jquery.js" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\jspec.js" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\jspec.nodejs.js" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\jspec.shell.js" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\jspec.timers.js" />
+    <Content Include="node_modules\jade\support\sass\spec\lib\jspec.xhr.js" />
+    <Content Include="node_modules\jade\support\sass\spec\node.js" />
+    <Content Include="node_modules\jade\support\sass\spec\spec.core.js" />
+    <Content Include="node_modules\jade\support\stylus\.gitignore" />
+    <Content Include="node_modules\jade\support\stylus\.gitmodules" />
+    <Content Include="node_modules\jade\support\stylus\bm.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\arithmetic.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\basic.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\builtins.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\comments.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\compress.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\conversions.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\functions.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\images.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\images\gopher.jpg" />
+    <Content Include="node_modules\jade\support\stylus\examples\images\jesus.gif" />
+    <Content Include="node_modules\jade\support\stylus\examples\images\sprite.gif" />
+    <Content Include="node_modules\jade\support\stylus\examples\implicit-functions.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\import.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\js-functions.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\literal.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\middleware.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\nesting.js" />
+    <Content Include="node_modules\jade\support\stylus\examples\public\.gitignore" />
+    <Content Include="node_modules\jade\support\stylus\examples\variables.js" />
+    <Content Include="node_modules\jade\support\stylus\index.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\colors.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\convert\css.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\functions\image.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\functions\index.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\functions\url.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\lexer.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\middleware.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\binop.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\block.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\boolean.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\call.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\charset.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\each.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\expression.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\function.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\group.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\hsla.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\ident.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\if.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\import.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\index.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\keyframes.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\literal.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\media.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\node.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\null.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\page.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\params.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\property.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\return.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\rgba.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\root.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\selector.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\string.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\ternary.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\unaryop.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\nodes\unit.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\parser.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\renderer.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\stack\frame.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\stack\index.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\stack\scope.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\stylus.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\token.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\utils.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\visitor\compiler.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\visitor\evaluator.js" />
+    <Content Include="node_modules\jade\support\stylus\lib\visitor\index.js" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\arithmetic.color.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\arithmetic.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\arithmetic.unary.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.components.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.dark.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.darken-by.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.image-size.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.join.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.last.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.length.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.light.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.lighten-by.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.lookup.complex.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.lookup.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.match.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.opposite-position.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.rgba.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.type.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.unit.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.unquote.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\bifs.url.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\coercion.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\comments.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\compress.units.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\conditional-assignment.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\css.functions.single-line.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\css.if.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\css.keyframes.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\css.large.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\css.media.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\css.mixins.braces.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\css.mixins.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\css.mixins.root.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\css.mixins.root.wonky.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\css.selectors.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\css.whitespace.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\escape.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\for.complex.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\for.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\for.function.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\function.arguments.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\function.literals.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.arg-calls.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.call.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.defaults.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.multi-line.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.multiple-calls.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.nested-calls.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.nested.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.property.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.return.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.return.each.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.variable.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\functions.variable.ident.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\if.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\if.else.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\if.mixin.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\if.postfix.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\if.selectors.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\import.basic.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\import.complex.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\import.index.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\import.literal.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\import.mixins.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\import.ordering.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\important.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\interpolation.properties.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\introspection.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\jquery.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\list.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\literal.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\media.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\mixin.conditional.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\mixin.order.conditional.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\mixin.order.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\mixin.order.nested.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\mixins.complex.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\mixins.complex.fix-to.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\mixins.conditional.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\mixins.nested.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\mixins.nested.selectors.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\mixins.order.2.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\mixins.return.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\mixins.root.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\operator.range.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\operators.assignment.function.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\operators.assignment.mixin.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\operators.assignment.root.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\operators.complex.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\operators.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\operators.equality.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\operators.in.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\operators.mixins.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\operators.precedence.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\operators.subscript.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\operators.subscript.range.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\page.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\parent.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\properties.colons.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\properties.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\properties.one-line.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\regression.107.lookup-failure.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\regression.127.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\regression.130.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\regression.131.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\regression.137.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\regression.139.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\regression.142.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\regression.146.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\regression.153.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\regression.154.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\regression.156.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\rule.charset.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\rulset.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\rulset.newline.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\scope.complex.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\scope.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\scope.nested.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\selectors.complex.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\selectors.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\selectors.nested.comma.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\selectors.nested.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\selectors.pseudo.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\self-assignment.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\vargs.call.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\vargs.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\variable.css" />
+    <Content Include="node_modules\jade\support\stylus\test\cases\variables.css" />
+    <Content Include="node_modules\jade\support\stylus\test\images\squirrel.jpeg" />
+    <Content Include="node_modules\jade\support\stylus\test\images\tux.png" />
+    <Content Include="node_modules\jade\support\stylus\test\run.js" />
+    <Content Include="node_modules\mime\index.js" />
+    <Content Include="node_modules\mime\mime.js" />
+    <Content Include="node_modules\qs\index.js" />
+    <Content Include="node_modules\qs\lib\querystring.js" />
+    <Content Include="public\css\site.css" />
+    <Content Include="routes.js" />
+    <Content Include="views\about.jade.txt" />
+    <Content Include="views\index.jade.txt" />
+    <Content Include="views\layout.jade.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="node_modules\connect\LICENSE" />
+    <None Include="node_modules\connect\package.json" />
+    <None Include="node_modules\express\LICENSE" />
+    <None Include="node_modules\express\package.json" />
+    <None Include="node_modules\jade\.npmignore" />
+    <None Include="node_modules\jade\History.md" />
+    <None Include="node_modules\jade\LICENSE" />
+    <None Include="node_modules\jade\Makefile" />
+    <None Include="node_modules\jade\package.json" />
+    <None Include="node_modules\jade\Readme.md" />
+    <None Include="node_modules\jade\support\coffee-script\bin\cake" />
+    <None Include="node_modules\jade\support\coffee-script\bin\coffee" />
+    <None Include="node_modules\jade\support\coffee-script\Cakefile" />
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\aliases.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>aliases.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\array_comprehensions.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>array_comprehensions.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\block_comment.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>block_comment.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\cake_tasks.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>cake_tasks.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\classes.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>classes.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\comparisons.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>comparisons.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\conditionals.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>conditionals.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\embedded.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>embedded.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\existence.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>existence.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\expressions.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>expressions.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\expressions_assignment.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>expressions_assignment.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\expressions_comprehension.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>expressions_comprehension.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\expressions_try.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>expressions_try.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\fat_arrow.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>fat_arrow.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\functions.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>functions.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\heredocs.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>heredocs.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\interpolation.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>interpolation.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\interpolation_expression.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>interpolation_expression.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\multiple_return_values.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>multiple_return_values.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\objects_and_arrays.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>objects_and_arrays.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\objects_reserved.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>objects_reserved.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\object_comprehensions.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>object_comprehensions.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\object_extraction.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>object_extraction.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\overview.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>overview.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\parallel_assignment.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>parallel_assignment.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\patterns_and_splats.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>patterns_and_splats.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\prototypes.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>prototypes.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\range_comprehensions.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>range_comprehensions.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\scope.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>scope.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\slices.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>slices.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\soaks.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>soaks.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\splats.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>splats.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\splices.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>splices.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\strings.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>strings.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\switch.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>switch.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\try.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>try.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\coffee\while.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>while.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\documentation\index.html.erb" />
+    <None Include="node_modules\jade\support\coffee-script\examples\beautiful_code\binary_search.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>binary_search.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\beautiful_code\quicksort_runtime.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>quicksort_runtime.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\beautiful_code\regular_expression_matcher.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>regular_expression_matcher.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\blocks.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>blocks.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\code.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\computer_science\binary_search.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>binary_search.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\computer_science\bubble_sort.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>bubble_sort.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\computer_science\linked_list.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>linked_list.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\computer_science\luhn_algorithm.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>luhn_algorithm.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\computer_science\merge_sort.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>merge_sort.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\computer_science\README" />
+    <None Include="node_modules\jade\support\coffee-script\examples\computer_science\selection_sort.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>selection_sort.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\poignant.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>poignant.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\potion.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>potion.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\underscore.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>underscore.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\examples\web_server.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>web_server.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\extras\EXTRAS" />
+    <None Include="node_modules\jade\support\coffee-script\extras\jsl.conf" />
+    <None Include="node_modules\jade\support\coffee-script\LICENSE" />
+    <None Include="node_modules\jade\support\coffee-script\package.json" />
+    <None Include="node_modules\jade\support\coffee-script\Rakefile" />
+    <None Include="node_modules\jade\support\coffee-script\README" />
+    <None Include="node_modules\jade\support\coffee-script\src\browser.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>browser.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\src\cake.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>cake.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\src\coffee-script.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>coffee-script.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\src\command.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>command.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\src\grammar.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>grammar.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\src\helpers.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>helpers.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\src\index.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>index.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\src\lexer.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>lexer.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\src\nodes.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>nodes.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\src\optparse.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>optparse.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\src\repl.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>repl.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\src\rewriter.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>rewriter.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\src\scope.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>scope.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_arguments.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_arguments.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_assignment.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_assignment.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_break.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_break.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_chaining.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_chaining.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_classes.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_classes.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_comments.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_comments.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_compilation.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_compilation.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_compound_assignment.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_compound_assignment.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_comprehensions.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_comprehensions.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_existence.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_existence.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_expressions.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_expressions.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_functions.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_functions.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_helpers.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_helpers.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_heredocs.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_heredocs.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_if.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_if.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_importing.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_importing.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_literals.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_literals.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_module.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_module.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_operations.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_operations.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_option_parser.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_option_parser.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_pattern_matching.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_pattern_matching.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_ranges_slices_and_splices.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_ranges_slices_and_splices.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_regexps.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_regexps.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_returns.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_returns.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_splats.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_splats.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_strings.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_strings.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_switch.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_try_catch.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_try_catch.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\coffee-script\test\test_while.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>test_while.js</LastGenOutput>
+    </None>
+    <None Include="node_modules\jade\support\expresso\bin\expresso" />
+    <None Include="node_modules\jade\support\expresso\docs\index.md" />
+    <None Include="node_modules\jade\support\expresso\History.md" />
+    <None Include="node_modules\jade\support\expresso\Makefile" />
+    <None Include="node_modules\jade\support\expresso\package.json" />
+    <None Include="node_modules\jade\support\expresso\Readme.md" />
+    <None Include="node_modules\jade\support\sass\History.md" />
+    <None Include="node_modules\jade\support\sass\Makefile" />
+    <None Include="node_modules\jade\support\sass\package.json" />
+    <None Include="node_modules\jade\support\sass\Readme.md" />
+    <None Include="node_modules\jade\support\sass\seed.yml" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\collect.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\comment.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\continuation.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\literal.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\mixin.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\mixin.undefined.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\properties.expand.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\properties.invalid.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\properties.nested.invalid.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\properties.nested.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\properties.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\selectors.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\variables.alternate.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\variables.regular.sass" />
+    <None Include="node_modules\jade\support\sass\spec\fixtures\variables.sass" />
+    <None Include="node_modules\jade\support\stylus\.npmignore" />
+    <None Include="node_modules\jade\support\stylus\bin\stylus" />
+    <None Include="node_modules\jade\support\stylus\bin\stylus-tutorial" />
+    <None Include="node_modules\jade\support\stylus\docs\bifs.md" />
+    <None Include="node_modules\jade\support\stylus\docs\comments.md" />
+    <None Include="node_modules\jade\support\stylus\docs\compare.md" />
+    <None Include="node_modules\jade\support\stylus\docs\conditionals.md" />
+    <None Include="node_modules\jade\support\stylus\docs\css-style.md" />
+    <None Include="node_modules\jade\support\stylus\docs\error-reporting.md" />
+    <None Include="node_modules\jade\support\stylus\docs\escape.md" />
+    <None Include="node_modules\jade\support\stylus\docs\executable.md" />
+    <None Include="node_modules\jade\support\stylus\docs\font-face.md" />
+    <None Include="node_modules\jade\support\stylus\docs\functions.md" />
+    <None Include="node_modules\jade\support\stylus\docs\functions.url.md" />
+    <None Include="node_modules\jade\support\stylus\docs\import.md" />
+    <None Include="node_modules\jade\support\stylus\docs\interpolation.md" />
+    <None Include="node_modules\jade\support\stylus\docs\introspection.md" />
+    <None Include="node_modules\jade\support\stylus\docs\iteration.md" />
+    <None Include="node_modules\jade\support\stylus\docs\js.md" />
+    <None Include="node_modules\jade\support\stylus\docs\keyframes.md" />
+    <None Include="node_modules\jade\support\stylus\docs\literal.md" />
+    <None Include="node_modules\jade\support\stylus\docs\media.md" />
+    <None Include="node_modules\jade\support\stylus\docs\middleware.md" />
+    <None Include="node_modules\jade\support\stylus\docs\mixins.md" />
+    <None Include="node_modules\jade\support\stylus\docs\operators.md" />
+    <None Include="node_modules\jade\support\stylus\docs\selectors.md" />
+    <None Include="node_modules\jade\support\stylus\docs\textmate.md" />
+    <None Include="node_modules\jade\support\stylus\docs\vargs.md" />
+    <None Include="node_modules\jade\support\stylus\docs\variables.md" />
+    <None Include="node_modules\jade\support\stylus\editors\Stylus.tmbundle\info.plist" />
+    <None Include="node_modules\jade\support\stylus\editors\Stylus.tmbundle\Syntaxes\Stylus.tmLanguage" />
+    <None Include="node_modules\jade\support\stylus\examples\arithmetic.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\basic.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\builtins.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\comments.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\conversions.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\functions.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\images.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\implicit-functions.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\import.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\js-functions.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\literal.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\mixins\box.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\nesting.styl" />
+    <None Include="node_modules\jade\support\stylus\examples\variables.styl" />
+    <None Include="node_modules\jade\support\stylus\History.md" />
+    <None Include="node_modules\jade\support\stylus\lib\functions\index.styl" />
+    <None Include="node_modules\jade\support\stylus\LICENSE" />
+    <None Include="node_modules\jade\support\stylus\Makefile" />
+    <None Include="node_modules\jade\support\stylus\package.json" />
+    <None Include="node_modules\jade\support\stylus\Readme.md" />
+    <None Include="node_modules\jade\support\stylus\test\cases\arithmetic.color.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\arithmetic.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\arithmetic.unary.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.components.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.dark.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.darken-by.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.image-size.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.join.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.last.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.length.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.light.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.lighten-by.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.lookup.complex.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.lookup.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.match.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.opposite-position.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.rgba.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.type.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.unit.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.unquote.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\bifs.url.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\coercion.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\comments.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\compress.units.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\conditional-assignment.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\css.functions.single-line.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\css.if.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\css.keyframes.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\css.large.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\css.media.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\css.mixins.braces.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\css.mixins.root.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\css.mixins.root.wonky.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\css.mixins.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\css.selectors.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\css.whitespace.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\escape.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\for.complex.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\for.function.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\for.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\function.arguments.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\function.literals.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.arg-calls.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.call.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.defaults.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.multi-line.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.multiple-calls.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.nested-calls.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.nested.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.property.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.return.each.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.return.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.variable.ident.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\functions.variable.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\if.else.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\if.mixin.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\if.postfix.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\if.selectors.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\if.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.basic.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.basic\a.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.basic\b.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.basic\c.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.complex.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.complex\a.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.complex\c.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.complex\nested\b.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.index.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.index\vendor\a.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.index\vendor\b.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.index\vendor\c.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.index\vendor\index.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.literal.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.mixins.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.ordering.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.ordering\five.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.ordering\four.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\import.ordering\two.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\important.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\interpolation.properties.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\introspection.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\jquery.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\list.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\literal.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\media.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixin.conditional.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixin.order.conditional.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixin.order.nested.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixin.order.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixins.complex.fix-to.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixins.complex.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixins.conditional.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixins.nested.selectors.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixins.nested.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixins.order.2.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixins.return.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixins.root.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\mixins\box.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\operator.range.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\operators.assignment.function.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\operators.assignment.mixin.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\operators.assignment.root.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\operators.complex.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\operators.equality.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\operators.in.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\operators.mixins.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\operators.precedence.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\operators.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\operators.subscript.range.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\operators.subscript.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\page.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\parent.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\properties.colons.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\properties.one-line.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\properties.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\regression.107.lookup-failure.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\regression.127.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\regression.130.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\regression.131.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\regression.137.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\regression.139.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\regression.142.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\regression.146.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\regression.153.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\regression.154.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\regression.156.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\rule.charset.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\rulset.newline.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\rulset.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\scope.complex.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\scope.nested.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\scope.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\selectors.complex.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\selectors.nested.comma.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\selectors.nested.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\selectors.pseudo.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\selectors.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\self-assignment.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\vargs.call.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\vargs.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\variable.styl" />
+    <None Include="node_modules\jade\support\stylus\test\cases\variables.styl" />
+    <None Include="node_modules\jade\support\stylus\test\images\gif" />
+    <None Include="node_modules\mime\LICENSE" />
+    <None Include="node_modules\mime\mime.types" />
+    <None Include="node_modules\mime\node.types" />
+    <None Include="node_modules\mime\package.json" />
+    <None Include="node_modules\qs\package.json" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>32114</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:32114/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

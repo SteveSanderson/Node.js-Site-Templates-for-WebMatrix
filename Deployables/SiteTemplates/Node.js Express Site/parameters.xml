@@ -1,0 +1,6 @@
+<parameters>
+  <parameter name="Parameter 1" description="Full site path where you want to install 
+          your application (for example, NodeJsExpressSite/Application)." defaultValue="NodeJsExpressSite" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="iisApp" match="NodeJsExpressSite" />
+  </parameter>
+</parameters>

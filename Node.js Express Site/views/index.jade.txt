@@ -1,0 +1,3 @@
+- locals.pageTitle = "Home page"
+
+p= message

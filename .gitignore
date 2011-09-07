@@ -1,0 +1,7 @@
+bin
+obj
+_ReSharper.*
+*.ReSharper.*
+*.suo
+*.csproj.user
+*/*.logs/*.txt

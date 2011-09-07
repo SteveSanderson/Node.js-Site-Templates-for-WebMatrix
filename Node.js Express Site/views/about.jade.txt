@@ -1,0 +1,3 @@
+- locals.pageTitle = "About us"
+
+p Add "About" info here

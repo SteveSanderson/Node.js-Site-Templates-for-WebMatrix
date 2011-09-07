@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
+  <UsingTask AssemblyFile="..\MsBuildTasks\bin\debug\WebMatrixSiteTemplates.MsBuildTasks.dll" TaskName="WebMatrixSiteTemplates.MsBuildTasks.HashTemplateFeedEntry" />
+  
+  <ItemGroup>
+    <SiteTemplates Include="Node.js Site" />
+    <SiteTemplates Include="Node.js Express Site" />
+  </ItemGroup>
+
+  <Target Name="BuildAllDeployables">    
+    <Message Text="Building site template deployables..." Importance="high" />
+    <CallTarget Targets="BuildSiteTemplate" />
+  </Target>
+
+  <Target Name="BuildSiteTemplate" Inputs="@(SiteTemplates)" Outputs="%(Identity).Dummy">
+    <PropertyGroup>
+      <CurrentTemplateName>@(SiteTemplates)</CurrentTemplateName>
+      <CurrentTemplateMetadataPath>SiteTemplates\@(SiteTemplates)</CurrentTemplateMetadataPath>
+      <SiteFilesPath>..\@(SiteTemplates)</SiteFilesPath>
+    </PropertyGroup>
+    <Message Text="Building site template: $(CurrentTemplateName)" Importance="high" />
+    
+    <MSBuild Projects ="$(MSBuildProjectFullPath)"
+             Properties ="SiteFilesPath=$(SiteFilesPath);CurrentTemplateMetadataPath=$(CurrentTemplateMetadataPath);CurrentTemplateName=$(CurrentTemplateName)"
+             Targets="CopySiteFilesToDeployables" />
+
+    <ItemGroup>
+      <ZipItems Include="$(CurrentTemplateMetadataPath)\manifest.xml" />
+      <ZipItems Include="$(CurrentTemplateMetadataPath)\parameters.xml" />
+      <ZipItems Include="$(CurrentTemplateMetadataPath)\$(CurrentTemplateName)\**\*.*" />
+    </ItemGroup>
+
+    <Zip Files="@(ZipItems)"
+         WorkingDirectory="$(CurrentTemplateMetadataPath)"
+         ZipFileName="$(OutDir)\$(CurrentTemplateName).zip"
+         ZipLevel="9" />
+
+    <HashTemplateFeedEntry 
+         ZipFileName="$(OutDir)\$(CurrentTemplateName).zip" 
+         InputFeedEntryFile="$(CurrentTemplateMetadataPath)\TemplateFeedEntry.xml"
+         OutputFeedEntryFile="$(OutDir)\$(CurrentTemplateName).xml"/>
+  </Target>
+  
+  <Target Name="CopySiteFilesToDeployables">
+    <ItemGroup>
+      <DefaultExclude Include="$(SiteFilesPath)\bin\**" />
+      <DefaultExclude Include="$(SiteFilesPath)\obj\**" />
+      <DefaultExclude Include="$(SiteFilesPath)\Properties\**" />
+      <DefaultExclude Include="$(SiteFilesPath)\*.logs\**" />
+      <DefaultExclude Include="$(SiteFilesPath)\*.csproj" />
+      <DefaultExclude Include="$(SiteFilesPath)\*.csproj.user" />
+    </ItemGroup>
+    <ItemGroup>
+      <SiteFiles Include="$(SiteFilesPath)\**\*.*" Exclude="@(DefaultExclude)" />
+    </ItemGroup>
+    <RemoveDir Directories="$(CurrentTemplateMetadataPath)\$(CurrentTemplateName)"/>
+    <Copy SourceFiles="@(SiteFiles)" DestinationFolder="$(CurrentTemplateMetadataPath)\$(CurrentTemplateName)\%(RecursiveDir)"/>    
+  </Target>
+
+</Project>

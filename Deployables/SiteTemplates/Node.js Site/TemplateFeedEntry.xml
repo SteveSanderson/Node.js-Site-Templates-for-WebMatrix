@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entry type="application">
+  <productId>NodeJsSite</productId>
+  <title>Node.js Site</title>
+  <version>0.1</version>
+  <summary>Empty site set up with Node.js</summary>
+  <id>http://example.com/NodeJsSite</id>
+  <updated>2011-01-14T20:30:02Z</updated>
+  <published>2011-01-14T20:30:02Z</published>
+  <longSummary>Empty site set up with Node.js</longSummary>
+  <link href="http://example.com/NodeJsSite" />
+  <images>
+    <icon>http://nodejs.org/logos/nodejs-green.png</icon>
+  </images>
+  <keywords>
+    <keywordId>Templates</keywordId>
+  </keywords>
+  <author>
+    <name>Steven Sanderson</name>
+    <uri>http://blog.stevensanderson.com/</uri>
+  </author>
+  <installers>
+    <installer>
+      <id>1</id>
+      <languageId>en</languageId>
+      <installerFile>
+        <fileSize>50</fileSize>
+        <installerURL>file://%ProgramFiles%\Microsoft WebMatrix\templates\NodeJsSite.zip</installerURL>
+        <sha1>{templateSha1Hash}</sha1>
+      </installerFile>
+      <msDeploy />
+    </installer>
+  </installers>
+</entry>
