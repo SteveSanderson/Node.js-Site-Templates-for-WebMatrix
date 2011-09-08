@@ -1,34 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<entry type="application">
-  <productId>NodeJsExpressSite</productId>
-  <title>Node.js Express Site</title>
-  <version>0.1</version>
-  <summary>Site set up with Node.js and the Express MVC framework</summary>
-  <id>http://example.com/NodeJsSite</id>
-  <updated>2011-01-14T20:30:02Z</updated>
-  <published>2011-01-14T20:30:02Z</published>
-  <longSummary>Site set up with Node.js and the Express MVC framework</longSummary>
-  <link href="http://example.com/NodeJsSite" />
-  <images>
-    <icon>http://nodejs.org/logos/nodejs-green.png</icon>
-  </images>
-  <keywords>
-    <keywordId>Templates</keywordId>
-  </keywords>
-  <author>
-    <name>Steven Sanderson</name>
-    <uri>http://blog.stevensanderson.com/</uri>
-  </author>
-  <installers>
-    <installer>
-      <id>1</id>
-      <languageId>en</languageId>
-      <installerFile>
-        <fileSize>50</fileSize>
-        <installerURL>file://%ProgramFiles%\Microsoft WebMatrix\templates\NodeJsExpressSite.zip</installerURL>
-        <sha1>{templateSha1Hash}</sha1>
-      </installerFile>
-      <msDeploy />
-    </installer>
-  </installers>
-</entry>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <entry type="application">
+    <installedBy>{58520BA8-DF03-4D4B-A311-5452F5DA5957}</installedBy>
+    <productId>NodeJsExpressSite</productId>
+    <title>Node.js Express Site</title>
+    <version>0.1</version>
+    <summary>Site set up with Node.js and the Express MVC framework</summary>
+    <id>http://example.com/NodeJsSite</id>
+    <updated>2011-01-14T20:30:02Z</updated>
+    <published>2011-01-14T20:30:02Z</published>
+    <longSummary>Site set up with Node.js and the Express MVC framework</longSummary>
+    <link href="http://example.com/NodeJsSite" />
+    <images>
+      <icon>http://nodejs.org/logos/nodejs-green.png</icon>
+    </images>
+    <keywords>
+      <keywordId>Templates</keywordId>
+    </keywords>
+    <author>
+      <name>Steven Sanderson</name>
+      <uri>http://blog.stevensanderson.com/</uri>
+    </author>
+    <installers>
+      <installer>
+        <id>1</id>
+        <languageId>en</languageId>
+        <installerFile>
+          <fileSize>50</fileSize>
+          <installerURL>file://%ProgramFiles%\Microsoft WebMatrix\templates\NodeJsExpressSite.zip</installerURL>
+          <sha1>{templateSha1Hash}</sha1>
+        </installerFile>
+        <msDeploy />
+      </installer>
+    </installers>
+  </entry>
+</feed>

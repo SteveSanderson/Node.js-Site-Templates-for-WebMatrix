@@ -1,27 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="e7337e39-3a31-4a62-840e-db52ecc932a1" Name="WebMatrixSiteTemplates.Setup" Language="1033" Version="1.0.0.0" Manufacturer="WebMatrixSiteTemplates.Setup" UpgradeCode="b8b39f1d-5ea2-4cc5-ac9a-73dde43c2ef1">
+
+  <?define ProductCode="*" ?>
+  <?define ProductVersion="0.0.2" ?>
+  <?define UpgradeCode="{A4FCC4D1-E886-4614-84D3-B4E3FEF23F0D}"?>
+  
+	<Product Id="$(var.ProductCode)" Name="WebMatrixSiteTemplates.Setup" Language="1033" Version="$(var.ProductVersion)" Manufacturer="WebMatrixSiteTemplates.Setup" UpgradeCode="$(var.UpgradeCode)">
 		<Package InstallerVersion="200" Compressed="yes" />
 
 		<Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
 
-		<Directory Id="TARGETDIR" Name="SourceDir">
+    <Upgrade Id="$(var.UpgradeCode)">
+      <UpgradeVersion Property='OLDVERSIONFOUND' IncludeMinimum='no' Minimum='0.0.0.0' OnlyDetect='no' />
+    </Upgrade>
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLLOCATION" Name="WebMatrixSiteTemplates.Setup">
-					<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
-					<!-- <Component Id="ProductComponent" Guid="c3b0f4c3-b303-4663-a299-4b0e46a6fa6e"> -->
-						<!-- TODO: Insert files, registry keys, and other resources here. -->
-					<!-- </Component> -->
-				</Directory>
+        <Directory Id="WebMatrixRoot" Name="Microsoft WebMatrix">
+          <Directory Id="WebMatrixTemplates" Name="templates">
+            <Component Id="ProductComponent" Guid="c3b0f4c3-b303-4663-a299-4b0e46a6fa6e">
+              <File Id="NodeJsZip" Name="NodeJsSite.zip" Source="$(var.Deployables.TargetDir)NodeJsSite.zip" DiskId="1" />
+              <File Id="NodeJsExpressZip" Name="NodeJsExpressSite.zip" Source="$(var.Deployables.TargetDir)NodeJsExpressSite.zip" DiskId="1" />
+            </Component>
+          </Directory>
+        </Directory>
 			</Directory>
-		</Directory>
+      
+      <Directory Id="TempFolder">
+        <Directory Id="TemplateFeedEntries" Name="TemplateFeedEntries">
+          <Component Id="TemplateFeedEntriesComponent" Guid="62AD25F4-C46F-4772-BB5A-797682CB86A0" DiskId="1">
+            <File Id="NodeJsXml" Name="NodeJsSite.xml" Source="$(var.Deployables.TargetDir)NodeJsSite.xml" DiskId="1" />
+            <File Id="NodeJsExpressXml" Name="NodeJsExpressSite.xml" Source="$(var.Deployables.TargetDir)NodeJsExpressSite.xml" DiskId="1" />
+          </Component>
+        </Directory>
+      </Directory>
+    </Directory>
 
 		<Feature Id="ProductFeature" Title="WebMatrixSiteTemplates.Setup" Level="1">
-			<!-- TODO: Remove the comments around this ComponentRef element and the Component above in order to add resources to this installer. -->
-			<!-- <ComponentRef Id="ProductComponent" /> -->
+			<ComponentRef Id="ProductComponent" />
+      <ComponentRef Id="TemplateFeedEntriesComponent" />
 			
 			<!-- Note: The following ComponentGroupRef is required to pull in generated authoring from project references. -->
 			<ComponentGroupRef Id="Product.Generated" />
 		</Feature>
+
+    <Binary Id="myCustomAction" SourceFile="..\WixCustomActions\bin\Debug\WebMatrixSiteTemplates.WixCustomActions.CA.dll" />
+    <CustomAction Id="RegisterTemplateFeedItems" BinaryKey="myCustomAction" DllEntry="RegisterTemplateFeedItems" Execute="immediate" />
+    
+    <InstallExecuteSequence>
+      <RemoveExistingProducts After="InstallInitialize"/>
+      <Custom Action='RegisterTemplateFeedItems' After='InstallFinalize' />
+    </InstallExecuteSequence>
 	</Product>
 </Wix>
