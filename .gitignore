@@ -5,3 +5,9 @@ _ReSharper.*
 *.suo
 *.csproj.user
 */*.logs/*.txt
+
+# Ignore all copies of the site files, e.g.,     Deployables/SiteTemplates/NodeJsSite/NodeJsSite/...
+Deployables/SiteTemplates/*/*
+
+# ... but don't ignore the metadata files, e.g., Deployables/SiteTemplates/NodeJsSite/manifest.xml
+!Deployables/SiteTemplates/*/*.xml
