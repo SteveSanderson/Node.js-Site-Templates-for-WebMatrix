@@ -14,8 +14,6 @@ namespace WebMatrixSiteTemplates.WixCustomActions
 
         [CustomAction]
         public static ActionResult RegisterTemplateFeedItems(Session session) {
-            Debugger.Launch();
-
             // First clear out any previous versions
             var removeTemplateFeedItemsResult = RemoveTemplateFeedItems(session);
             if (removeTemplateFeedItemsResult != ActionResult.Success)
