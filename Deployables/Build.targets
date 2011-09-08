@@ -1,45 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
+  <UsingTask AssemblyFile="..\MsBuildTasks\bin\debug\WebMatrixSiteTemplates.MsBuildTasks.dll" TaskName="WebMatrixSiteTemplates.MsBuildTasks.GetSubfolders" />
   <UsingTask AssemblyFile="..\MsBuildTasks\bin\debug\WebMatrixSiteTemplates.MsBuildTasks.dll" TaskName="WebMatrixSiteTemplates.MsBuildTasks.HashTemplateFeedEntry" />
   
-  <ItemGroup>
-    <SiteTemplates Include="Node.js Site" />
-    <SiteTemplates Include="Node.js Express Site" />
-  </ItemGroup>
-
   <Target Name="BuildAllDeployables">    
     <Message Text="Building site template deployables..." Importance="high" />
-    <CallTarget Targets="BuildSiteTemplate" />
+    <GetSubfolders FolderPath="$(ProjectDir)SiteTemplates">
+      <Output ItemName="SiteTemplates" TaskParameter="Results" />
+    </GetSubfolders>
+    <MSBuild Projects ="$(MSBuildProjectFullPath)"
+             Properties ="SiteTemplate=%(SiteTemplates.Identity)"
+             Targets="BuildSiteTemplate" />
   </Target>
 
-  <Target Name="BuildSiteTemplate" Inputs="@(SiteTemplates)" Outputs="%(Identity).Dummy">
+  <Target Name="BuildSiteTemplate">
     <PropertyGroup>
-      <CurrentTemplateName>@(SiteTemplates)</CurrentTemplateName>
-      <CurrentTemplateMetadataPath>SiteTemplates\@(SiteTemplates)</CurrentTemplateMetadataPath>
-      <SiteFilesPath>..\@(SiteTemplates)</SiteFilesPath>
+      <SiteTemplateMetadataPath>SiteTemplates\$(SiteTemplate)</SiteTemplateMetadataPath>
+      <SiteFilesPath>..\Sites\$(SiteTemplate)</SiteFilesPath>
     </PropertyGroup>
-    <Message Text="Building site template: $(CurrentTemplateName)" Importance="high" />
+    <Message Text="Building site template: $(SiteTemplate)" Importance="high" />
     
     <MSBuild Projects ="$(MSBuildProjectFullPath)"
-             Properties ="SiteFilesPath=$(SiteFilesPath);CurrentTemplateMetadataPath=$(CurrentTemplateMetadataPath);CurrentTemplateName=$(CurrentTemplateName)"
+             Properties ="SiteFilesPath=$(SiteFilesPath);SiteTemplateMetadataPath=$(SiteTemplateMetadataPath);SiteTemplate=$(SiteTemplate)"
              Targets="CopySiteFilesToDeployables" />
 
     <ItemGroup>
-      <ZipItems Include="$(CurrentTemplateMetadataPath)\manifest.xml" />
-      <ZipItems Include="$(CurrentTemplateMetadataPath)\parameters.xml" />
-      <ZipItems Include="$(CurrentTemplateMetadataPath)\$(CurrentTemplateName)\**\*.*" />
+      <ZipItems Include="$(SiteTemplateMetadataPath)\manifest.xml" />
+      <ZipItems Include="$(SiteTemplateMetadataPath)\parameters.xml" />
+      <ZipItems Include="$(SiteTemplateMetadataPath)\$(SiteTemplate)\**\*.*" />
     </ItemGroup>
 
     <Zip Files="@(ZipItems)"
-         WorkingDirectory="$(CurrentTemplateMetadataPath)"
-         ZipFileName="$(OutDir)\$(CurrentTemplateName).zip"
+         WorkingDirectory="$(SiteTemplateMetadataPath)"
+         ZipFileName="$(OutDir)\$(SiteTemplate).zip"
          ZipLevel="9" />
 
     <HashTemplateFeedEntry 
-         ZipFileName="$(OutDir)\$(CurrentTemplateName).zip" 
-         InputFeedEntryFile="$(CurrentTemplateMetadataPath)\TemplateFeedEntry.xml"
-         OutputFeedEntryFile="$(OutDir)\$(CurrentTemplateName).xml"/>
+         ZipFileName="$(OutDir)\$(SiteTemplate).zip" 
+         InputFeedEntryFile="$(SiteTemplateMetadataPath)\TemplateFeedEntry.xml"
+         OutputFeedEntryFile="$(OutDir)\$(SiteTemplate).xml"/>
   </Target>
   
   <Target Name="CopySiteFilesToDeployables">
@@ -54,8 +54,8 @@
     <ItemGroup>
       <SiteFiles Include="$(SiteFilesPath)\**\*.*" Exclude="@(DefaultExclude)" />
     </ItemGroup>
-    <RemoveDir Directories="$(CurrentTemplateMetadataPath)\$(CurrentTemplateName)"/>
-    <Copy SourceFiles="@(SiteFiles)" DestinationFolder="$(CurrentTemplateMetadataPath)\$(CurrentTemplateName)\%(RecursiveDir)"/>    
+    <RemoveDir Directories="$(SiteTemplateMetadataPath)\$(SiteTemplate)"/>
+    <Copy SourceFiles="@(SiteFiles)" DestinationFolder="$(SiteTemplateMetadataPath)\$(SiteTemplate)\%(RecursiveDir)"/>    
   </Target>
 
 </Project>

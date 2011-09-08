@@ -43,12 +43,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SiteTemplates\Node.js Express Site\manifest.xml" />
-    <Content Include="SiteTemplates\Node.js Express Site\parameters.xml" />
-    <Content Include="SiteTemplates\Node.js Express Site\TemplateFeedEntry.xml" />
-    <Content Include="SiteTemplates\Node.js Site\manifest.xml" />
-    <Content Include="SiteTemplates\Node.js Site\parameters.xml" />
-    <Content Include="SiteTemplates\Node.js Site\TemplateFeedEntry.xml" />
+    <Content Include="SiteTemplates\NodeJsExpressSite\manifest.xml" />
+    <Content Include="SiteTemplates\NodeJsExpressSite\parameters.xml" />
+    <Content Include="SiteTemplates\NodeJsExpressSite\TemplateFeedEntry.xml" />
+    <Content Include="SiteTemplates\NodeJsSite\manifest.xml" />
+    <Content Include="SiteTemplates\NodeJsSite\parameters.xml" />
+    <Content Include="SiteTemplates\NodeJsSite\TemplateFeedEntry.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Build.targets">
