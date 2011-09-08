@@ -14,6 +14,16 @@
       <UpgradeVersion Property='OLDVERSIONFOUND' IncludeMinimum='no' Minimum='0.0.0.0' OnlyDetect='no' />
     </Upgrade>
 
+    <Condition Message='You must install Microsoft WebMatrix first.'>
+      Installed OR WEB_MATRIX_TEMPLATES_FEED
+    </Condition>
+
+    <Property Id='WEB_MATRIX_TEMPLATES_FEED'>
+      <DirectorySearch Id='WEB_MATRIX_TEMPLATES_FEED_DIR' Path='[ProgramFilesFolder]\Microsoft WebMatrix\templates'>
+        <FileSearch Id='WEB_MATRIX_TEMPLATES_FEED_FILE' Name='TemplateFeed.xml' />
+      </DirectorySearch>
+    </Property>    
+
     <Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
         <Directory Id="WebMatrixRoot" Name="Microsoft WebMatrix">
@@ -45,11 +55,11 @@
 		</Feature>
 
     <Binary Id="myCustomAction" SourceFile="..\WixCustomActions\bin\Debug\WebMatrixSiteTemplates.WixCustomActions.CA.dll" />
-    <CustomAction Id="RegisterTemplateFeedItems" BinaryKey="myCustomAction" DllEntry="RegisterTemplateFeedItems" Execute="immediate" />
+    <CustomAction Id="RegisterTemplateFeedItems" BinaryKey="myCustomAction" DllEntry="RegisterTemplateFeedItems" Execute="deferred" Impersonate="no" />
     
     <InstallExecuteSequence>
       <RemoveExistingProducts After="InstallInitialize"/>
-      <Custom Action='RegisterTemplateFeedItems' After='InstallFinalize' />
+      <Custom Action='RegisterTemplateFeedItems' Before='InstallFinalize' />
     </InstallExecuteSequence>
 	</Product>
 </Wix>
