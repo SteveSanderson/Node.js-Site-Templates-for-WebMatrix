@@ -5,7 +5,7 @@
   <?define ProductVersion="0.0.2" ?>
   <?define UpgradeCode="{A4FCC4D1-E886-4614-84D3-B4E3FEF23F0D}"?>
   
-	<Product Id="$(var.ProductCode)" Name="WebMatrixSiteTemplates.Setup" Language="1033" Version="$(var.ProductVersion)" Manufacturer="WebMatrixSiteTemplates.Setup" UpgradeCode="$(var.UpgradeCode)">
+	<Product Id="$(var.ProductCode)" Name="Node.js Site Templates for Microsoft WebMatrix" Language="1033" Version="$(var.ProductVersion)" Manufacturer="Microsoft Corporation" UpgradeCode="$(var.UpgradeCode)">
 		<Package InstallerVersion="200" Compressed="yes" />
 
 		<Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
@@ -61,5 +61,9 @@
       <RemoveExistingProducts After="InstallInitialize"/>
       <Custom Action='RegisterTemplateFeedItems' Before='InstallFinalize' />
     </InstallExecuteSequence>
-	</Product>
+
+    <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
+    <UIRef Id='WixUI_Minimal' />
+
+  </Product>
 </Wix>
