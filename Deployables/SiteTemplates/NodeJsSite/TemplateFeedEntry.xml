@@ -3,7 +3,7 @@
   <entry type="application">
     <installedBy>{58520BA8-DF03-4D4B-A311-5452F5DA5957}</installedBy>
     <productId>NodeJsSite</productId>
-    <title>Node.js Site</title>
+    <title>Empty Node.js Site</title>
     <version>0.1</version>
     <summary>Empty site set up with Node.js</summary>
     <id>http://example.com/NodeJsSite</id>
