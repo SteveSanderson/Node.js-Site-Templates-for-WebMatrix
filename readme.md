@@ -2,9 +2,9 @@ Want to build [Node.js](http://nodejs.org) applications on Windows using [WebMat
 
 # Installation
 
-1. Install [WebMatrix](http://www.microsoft.com/web/webmatrix/)
-1. Follow [Tomasz's instructions to install IISNode for WebMatrix](http://tomasz.janczuk.org/2011/08/developing-nodejs-applications-in.html). Read the instructions carefully and be sure to use a 32-bit command prompt when running `install_iisexpress.bat`, as the instructions specify.
-1. Download and run the [Node.js Site Templates for WebMatrix installer](https://github.com/SteveSanderson/Node.js-Site-Templates-for-WebMatrix/downloads).
+1. **Install [WebMatrix](http://www.microsoft.com/web/webmatrix/).** This is a free, lightweight IDE from Microsoft, that can be used to build sites with ASP.NET, PHP, Node.js, and more.
+1. **Follow [Tomasz's instructions to install IISNode for IIS Express](http://tomasz.janczuk.org/2011/08/developing-nodejs-applications-in.html).** Read the instructions carefully and be sure to use a 32-bit command prompt when running `install_iisexpress.bat`, as the instructions specify.
+1. **Download and run the [Node.js Site Templates for WebMatrix installer](https://github.com/SteveSanderson/Node.js-Site-Templates-for-WebMatrix/downloads).**
 
 # Usage
 
