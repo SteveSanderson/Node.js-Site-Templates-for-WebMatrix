@@ -2,7 +2,7 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
   <?define ProductCode="*" ?>
-  <?define ProductVersion="0.0.2" ?>
+  <?define ProductVersion="0.0.3" ?>
   <?define UpgradeCode="{A4FCC4D1-E886-4614-84D3-B4E3FEF23F0D}"?>
   
 	<Product Id="$(var.ProductCode)" Name="Node.js Site Templates for Microsoft WebMatrix" Language="1033" Version="$(var.ProductVersion)" Manufacturer="Microsoft Corporation" UpgradeCode="$(var.UpgradeCode)">
