@@ -10,4 +10,4 @@ var app = module.exports = express.createServer().configure(function() {
 });
 
 require('./routes.js')(app);
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 8080);
